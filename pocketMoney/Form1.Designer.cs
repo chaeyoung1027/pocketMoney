@@ -28,17 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.pocketMoneyBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.schoolNumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pocketmoneyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.useMoneyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pocketMoneyBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.nameDataGridViewTextBoxColumn,
+            this.schoolNumDataGridViewTextBoxColumn,
+            this.pocketmoneyDataGridViewTextBoxColumn,
+            this.useMoneyDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.pocketMoneyBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 23;
@@ -81,6 +95,34 @@
             this.button4.Text = "쓴 돈이 많은 사람부터 보기";
             this.button4.UseVisualStyleBackColor = true;
             // 
+            // pocketMoneyBindingSource
+            // 
+            this.pocketMoneyBindingSource.DataSource = typeof(pocketMoney.pocketMoney);
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            // 
+            // schoolNumDataGridViewTextBoxColumn
+            // 
+            this.schoolNumDataGridViewTextBoxColumn.DataPropertyName = "schoolNum";
+            this.schoolNumDataGridViewTextBoxColumn.HeaderText = "schoolNum";
+            this.schoolNumDataGridViewTextBoxColumn.Name = "schoolNumDataGridViewTextBoxColumn";
+            // 
+            // pocketmoneyDataGridViewTextBoxColumn
+            // 
+            this.pocketmoneyDataGridViewTextBoxColumn.DataPropertyName = "pocketmoney";
+            this.pocketmoneyDataGridViewTextBoxColumn.HeaderText = "pocketmoney";
+            this.pocketmoneyDataGridViewTextBoxColumn.Name = "pocketmoneyDataGridViewTextBoxColumn";
+            // 
+            // useMoneyDataGridViewTextBoxColumn
+            // 
+            this.useMoneyDataGridViewTextBoxColumn.DataPropertyName = "useMoney";
+            this.useMoneyDataGridViewTextBoxColumn.HeaderText = "useMoney";
+            this.useMoneyDataGridViewTextBoxColumn.Name = "useMoneyDataGridViewTextBoxColumn";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -94,6 +136,7 @@
             this.Name = "Form1";
             this.Text = "3212 임채영";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pocketMoneyBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -105,6 +148,11 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn schoolNumDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pocketmoneyDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn useMoneyDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource pocketMoneyBindingSource;
     }
 }
 
