@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace pocketMoney
 {
-    internal class pocketMoney
+    internal class PMoney
     {
         public string Name { get; set; }
         public string schoolNum { get; set; }
         public int pocketmoney { get; set; }
         public int useMoney { get; set; }
-
     }
 }
